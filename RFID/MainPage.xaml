@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RFID.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="StudPay Card Scanner" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+
+       <Frame HeightRequest="200">
+            <Grid Margin="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Vertical" >
+                    <Entry Placeholder="Enter the code here" FontSize="30" HorizontalTextAlignment="Center" TextTransform="Uppercase"/>
+                    <Button Text="Persist code on the RFID Card" HeightRequest="50" Margin="0,8"
+                            BackgroundColor="Green"
+                            CornerRadius="6"
+                            TextColor="White"
+                            Clicked="Button_Clicked"/>
+                </StackLayout>
+
+            </Grid>
+       </Frame>
+
+
+        <Frame HeightRequest="60">
+            <Grid Margin="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Vertical" >
+                    <Button Text="Read data from the RFID Card" HeightRequest="50" Margin="0,8"
+                            BackgroundColor="Blue"
+                            CornerRadius="6"
+                            TextColor="White"
+                            Clicked="Button_Clicked_1"/>
+                </StackLayout>
+
+            </Grid>
+       </Frame>
+
+    </StackLayout>
+
+</ContentPage>
